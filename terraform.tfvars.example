@@ -1,0 +1,5 @@
+bucket_name   = "my-secure-bucket-REPLACE_ME"
+iam_user_name = "portfolio-user"
+aws_region    = "us-east-1"
+repo_filter   = "repo:YOUR-GITHUB-USER/terraform-s3-iam:*"
+iam_role_name = "github-actions-terraform-role"
