@@ -22,11 +22,10 @@ jobs:
         with:
           terraform_version: "1.9.8"
 
-      - name: Install tfsec
-        run: curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install.sh | bash
-
       - name: tfsec scan
-        run: tfsec .
+        uses: aquasecurity/tfsec-action@v1.0.3
+        with:
+          format: sarif
 
       - name: Configure AWS Credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v4
