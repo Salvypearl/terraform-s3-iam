@@ -1,6 +1,5 @@
 resource "aws_s3_bucket" "this" {
   bucket = var.bucket_name
-  acl    = "private"
 }
 
 resource "aws_s3_bucket_public_access_block" "block" {
@@ -10,3 +9,4 @@ resource "aws_s3_bucket_public_access_block" "block" {
   ignore_public_acls      = true
   restrict_public_buckets = true
 }
+
